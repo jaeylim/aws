@@ -1,37 +1,15 @@
 region: ap-northeast-2
-metrics:
 - aws_dimensions:
   - AvailabilityZone
   - LoadBalancerName
-  aws_metric_name: HTTPCode_Backend_5XX
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - AvailabilityZone
-  - LoadBalancerName
-  aws_metric_name: HTTPCode_Backend_4XX_Count
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - AvailabilityZone
-  - LoadBalancerName
-  aws_metric_name: HTTPCode_Backend_3XX
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - AvailabilityZone
-  - LoadBalancerName
-  aws_metric_name: HTTPCode_Backend_2XX_Count
+  aws_metric_name: HTTPCode_Target_2XX_Count
   aws_namespace: AWS/ELB
   aws_statistics:
   - Sum
 - aws_dimensions:
   - LoadBalancerName
   - AvailabilityZone
-  aws_metric_name: HTTPCode_ELB_5XX
+  aws_metric_name: HTTPCode_Target_2XX_Count
   aws_namespace: AWS/ELB
   aws_statistics:
   - Sum
@@ -50,81 +28,14 @@ metrics:
   aws_statistics:
   - Sum
 - aws_dimensions:
-  - AvailabilityZone
-  - LoadBalancerName
-  aws_metric_name: Latency
+  - LoadBalancer
+  aws_metric_name: NewConnectionCount
+  aws_namespace: AWS/ELB
+  aws_statistics:
+  - Sum
+- aws_dimensions:
+  - LoadBalancer
+  aws_metric_name: TargetResponseTime
   aws_namespace: AWS/ELB
   aws_statistics:
   - Average
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: ActiveFlowCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: ActiveFlowCount_TLS
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: ProcessedBytes
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: ProcessedBytes_TLS
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: HealthyHostCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Minimum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: HealthyHostCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Maximum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: UnHealthyHostCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Maximum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: UnHealthyHostCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Minimum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: NewFlowCount
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: NewFlowCount_TLS
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: TCP_Client_Reset_Count
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - LoadBalancer
-  aws_metric_name: TCP_ELB_Reset_Count
-  aws_namespace: AWS/ELB
-  aws_statistics:
-  - Sum
