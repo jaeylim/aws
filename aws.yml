@@ -126,19 +126,7 @@ region: ap-northeast-2
 metrics:
 - aws_dimensions:
   - DBInstanceIdentifier
-  aws_metric_name: DatabaseConnections
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Maximum
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: FreeStorageSpace
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: FreeableMemory
+  aws_metric_name: BurstBalance
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
@@ -147,7 +135,60 @@ metrics:
   aws_metric_name: CPUUtilization
   aws_namespace: AWS/RDS
   aws_statistics:
+  - Average  
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: DatabaseConnections
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Maximum
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: DiskQueueDepth
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average  
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: EBSByteBalance
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average  
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: EBSIOBalance
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average  
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: FreeableMemory
+  aws_namespace: AWS/RDS
+  aws_statistics:
   - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: FreeStorageSpace
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: LVMReadIOPS
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: LVMWriteIOPS
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+
+
+
+
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: ReadIOPS
@@ -186,31 +227,26 @@ metrics:
   - Average
 - aws_dimensions:
   - DBInstanceIdentifier
-  aws_metric_name: CPUCreditUsage
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
   aws_metric_name: CPUCreditBalance
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
 - aws_dimensions:
   - DBInstanceIdentifier
-  aws_metric_name: DiskQueueDepth
+  aws_metric_name: CPUCreditUsage
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: NetworkReceiveThroughput
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: NetworkTransmitThroughput
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: NetworkReceiveThroughput
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
