@@ -132,6 +132,18 @@ metrics:
   - Average
 - aws_dimensions:
   - DBInstanceIdentifier
+  aws_metric_name: CPUCreditBalance
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: CPUCreditUsage
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
   aws_metric_name: CPUUtilization
   aws_namespace: AWS/RDS
   aws_statistics:
@@ -172,7 +184,6 @@ metrics:
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
-
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: LVMReadIOPS
@@ -185,59 +196,6 @@ metrics:
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
-
-
-
-
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: ReadIOPS
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: WriteIOPS
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: ReadLatency
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: WriteLatency
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: ReadThroughput
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: WriteThroughput
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: CPUCreditBalance
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: CPUCreditUsage
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: NetworkReceiveThroughput
@@ -250,3 +208,44 @@ metrics:
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: ReadIOPS
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Sum
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: ReadLatency
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: ReadThroughput
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: WriteIOPS
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Sum
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: WriteLatency
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - DBInstanceIdentifier
+  aws_metric_name: WriteThroughput
+  aws_namespace: AWS/RDS
+  aws_statistics:
+  - Average
+---
+
+
+  
+ 
