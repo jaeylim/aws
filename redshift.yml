@@ -1,4 +1,4 @@
-region: us-east-1
+region: ap-northeast-2
 metrics:
 - aws_dimensions:
   - ClusterIdentifier
@@ -26,7 +26,9 @@ metrics:
   - Average
 - aws_dimensions:
   - ClusterIdentifier
-  aws_metric_name: NetworkReceiveThroughput$AVG
+  aws_metric_name: NetworkReceiveThroughput
+  aws_statistics:
+  - Average
   aws_namespace: AWS/Redshift
 - aws_dimensions:
   - ClusterIdentifier
@@ -70,6 +72,49 @@ metrics:
   aws_namespace: AWS/Redshift
   aws_statistics:
   - Average
+  
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: WLMQueueLength
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: WLMQueryDuration
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: WLMQueriesCompletedPerSecond
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: WLMQueueWaitTime
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: 
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average 
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: WLMRunningQueries
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: QueryRuntimeBreakdown
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
 - aws_dimensions:
   - ClusterIdentifier
   aws_metric_name: QueryDuration
@@ -79,6 +124,66 @@ metrics:
 - aws_dimensions:
   - ClusterIdentifier
   aws_metric_name: QueriesCompletedPerSecond
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: CommitQueueLength
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: PercentageDiskSpaceUsed
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: AutoVacuumSpaceFreed
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: ConcurrencyScalingActiveClusters
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: MaxConfiguredConcurrencyScalingClusters
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: NumExceededSchemaQuotas
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: 
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: PercentageDiskSpaceUsed
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: RedshiftManagedStorageTotalCapacity
+  aws_namespace: AWS/Redshift
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - ClusterIdentifier
+  aws_metric_name: TotalTableCount
   aws_namespace: AWS/Redshift
   aws_statistics:
   - Average
