@@ -15,34 +15,7 @@ metrics:
   - Average
 - aws_dimensions:
   - InstanceId
-  aws_metric_name: CPUSurplusCreditBalance
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - InstanceId
-  aws_metric_name: CPUSurplusCreditsCharged
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - InstanceId
   aws_metric_name: CPUUtilization
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-#  aws_tag_select:
-#    resource_type_selection: ec2:instance
-#    resource_id_dimension: InstanceId
-- aws_dimensions:
-  - InstanceId
-  aws_metric_name: EBSByteBalance
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - InstanceId
-  aws_metric_name: EBSIOBalance
   aws_namespace: AWS/EC2
   aws_statistics:
   - Average
@@ -54,19 +27,7 @@ metrics:
   - Average
 - aws_dimensions:
   - InstanceId
-  aws_metric_name: EBSReadOps
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - InstanceId
   aws_metric_name: EBSWriteBytes
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - InstanceId
-  aws_metric_name: EBSWriteOps
   aws_namespace: AWS/EC2
   aws_statistics:
   - Average
@@ -102,25 +63,14 @@ metrics:
   - Sum
 - aws_dimensions:
   - InstanceId
-  aws_metric_name: StatusCheckFailed_Instance
-  aws_namespace: AWS/EC2
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - InstanceId
   aws_metric_name: StatusCheckFailed_System
   aws_namespace: AWS/EC2
   aws_statistics:
   - Sum
+
 #RDS
 region: ap-northeast-2
 metrics:
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: BurstBalance
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: CPUCreditBalance
@@ -153,18 +103,6 @@ metrics:
   - Average  
 - aws_dimensions:
   - DBInstanceIdentifier
-  aws_metric_name: EBSByteBalance
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average  
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: EBSIOBalance
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average  
-- aws_dimensions:
-  - DBInstanceIdentifier
   aws_metric_name: FreeableMemory
   aws_namespace: AWS/RDS
   aws_statistics:
@@ -172,18 +110,6 @@ metrics:
 - aws_dimensions:
   - DBInstanceIdentifier
   aws_metric_name: FreeStorageSpace
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: LVMReadIOPS
-  aws_namespace: AWS/RDS
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - DBInstanceIdentifier
-  aws_metric_name: LVMWriteIOPS
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
@@ -235,6 +161,7 @@ metrics:
   aws_namespace: AWS/RDS
   aws_statistics:
   - Average
+
 #ALB
 region: ap-northeast-2
 metrics:
@@ -310,92 +237,6 @@ metrics:
 #S3
 region: ap-northeast-2
 metrics:
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: BytesPendingReplication
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: ReplicationLatency
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: 4xxErrors
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: 5xxErrors
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: AllRequests
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: FirstByteLatency
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: TotalRequestLatency
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: NumberOfObjects
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: BytesPendingReplication
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-  - Average
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: OperationPendingReplication
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-  - Average
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: PutRequests
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: ListRequests
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
 - aws_namespace: AWS/S3
   aws_metric_name: BucketSizeBytes
   aws_dimensions: [BucketName, StorageType]
@@ -555,113 +396,5 @@ metrics:
   aws_namespace: AWS/Redshift
   aws_statistics:
   - Maximum
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: WLMQueueLength
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: WLMQueryDuration
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: WLMQueriesCompletedPerSecond
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: WLMQueueWaitTime
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: 
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average 
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: WLMRunningQueries
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: QueryRuntimeBreakdown
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: QueryDuration
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: QueriesCompletedPerSecond
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: CommitQueueLength
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: PercentageDiskSpaceUsed
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: AutoVacuumSpaceFreed
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: ConcurrencyScalingActiveClusters
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: MaxConfiguredConcurrencyScalingClusters
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: NumExceededSchemaQuotas
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: PercentageDiskSpaceUsed
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Maximum
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: RedshiftManagedStorageTotalCapacity
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Maximum
-- aws_dimensions:
-  - ClusterIdentifier
-  aws_metric_name: TotalTableCount
-  aws_namespace: AWS/Redshift
-  aws_statistics:
-  - Sum
 
 #Backup
