@@ -1,3 +1,6 @@
+# Date: 2022-11-07
+# Resources: EC2, RDS, LB(A/N), EBS, Redshift
+
 #EC2
 region: ap-northeast-2
 metrics:
