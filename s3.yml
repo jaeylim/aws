@@ -11,10 +11,16 @@ metrics:
   - BucketName
   - FilterId
   aws_metric_name: BytesPendingReplication
+  aws_namespace: AWS/S3
+  aws_statistics:
+  - Sum
 - aws_dimensions:
   - BucketName
   - FilterId
   aws_metric_name: OperatingPendingReplication
+  aws_namespace: AWS/S3
+  aws_statistics:
+  - Sum
 - aws_dimensions:
   - BucketName
   - FilterId
@@ -22,12 +28,6 @@ metrics:
   aws_namespace: AWS/S3
   aws_statistics:
   - Sum
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum  
 - aws_dimensions:
   - BucketName
   - FilterId
@@ -66,7 +66,14 @@ metrics:
 - aws_dimensions:
   - BucketName
   - FilterId
-  aws_metric_name: BytesDownloaded
+  aws_metric_name: NumberOfObjects
+  aws_namespace: AWS/S3
+  aws_statistics:
+  - Sum
+- aws_dimensions:
+  - BucketName
+  - FilterId
+  aws_metric_name: BytesPendingReplication
   aws_namespace: AWS/S3
   aws_statistics:
   - Sum
@@ -74,7 +81,7 @@ metrics:
 - aws_dimensions:
   - BucketName
   - FilterId
-  aws_metric_name: BytesUploaded
+  aws_metric_name: OperationPendingReplication
   aws_namespace: AWS/S3
   aws_statistics:
   - Sum
@@ -90,20 +97,6 @@ metrics:
   - BucketName
   - FilterId
   aws_metric_name: ListRequests
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: HeadRequests
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: GetRequests
   aws_namespace: AWS/S3
   aws_statistics:
   - Sum
