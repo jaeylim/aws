@@ -3,21 +3,7 @@ metrics:
 - aws_dimensions:
   - BucketName
   - FilterId
-  aws_metric_name: NumberOfObjects
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
   aws_metric_name: BytesPendingReplication
-  aws_namespace: AWS/S3
-  aws_statistics:
-  - Sum
-- aws_dimensions:
-  - BucketName
-  - FilterId
-  aws_metric_name: OperatingPendingReplication
   aws_namespace: AWS/S3
   aws_statistics:
   - Sum
