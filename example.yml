@@ -420,7 +420,21 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
+  aws_metric_name: CPUCreditUsage
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
   aws_metric_name: FreeableMemory
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
+  aws_metric_name: DatabaseMemoryUsagePercentage
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
@@ -448,21 +462,7 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: CacheHits
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: CacheMisses
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: CurrConnections
+  aws_metric_name: CacheHitRate
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
@@ -476,28 +476,7 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: GetTypeCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: SetTypeCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
   aws_metric_name: EngineCPUUtilization
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: BytesUsedForCache
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
@@ -512,13 +491,6 @@ metrics:
   - CacheNodeId
   - CacheClusterId
   aws_metric_name: HyperLogLogBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: KeyBasedCmds
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
@@ -567,21 +539,14 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: CurrItems
+  aws_metric_name: DatabaseMemoryUsageCountedForEvictPercentage
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: ActiveDefragHits
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: Evictions
+  aws_metric_name: BytesUsedForCache
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
