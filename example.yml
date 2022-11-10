@@ -434,6 +434,13 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
+  aws_metric_name: MemoryFragmentationRatio
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
   aws_metric_name: DatabaseMemoryUsagePercentage
   aws_namespace: AWS/ElastiCache
   aws_statistics:
@@ -455,6 +462,20 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
+  aws_metric_name: NetworkPacketsIn
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
+  aws_metric_name: NetworkPacketsOut
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
   aws_metric_name: SwapUsage
   aws_namespace: AWS/ElastiCache
   aws_statistics:
@@ -469,70 +490,7 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: NewConnections
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
   aws_metric_name: EngineCPUUtilization
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: HashBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: HyperLogLogBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: ListBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: SetBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: SetTypeCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: SortedSetBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: StringBasedCmds
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
-  aws_metric_name: StreamBasedCmds
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
@@ -553,13 +511,6 @@ metrics:
 - aws_dimensions:
   - CacheNodeId
   - CacheClusterId
-  aws_metric_name: Reclaimed
-  aws_namespace: AWS/ElastiCache
-  aws_statistics:
-  - Average
-- aws_dimensions:
-  - CacheNodeId
-  - CacheClusterId
   aws_metric_name: SaveInProgress
   aws_namespace: AWS/ElastiCache
   aws_statistics:
@@ -568,6 +519,13 @@ metrics:
   - CacheNodeId
   - CacheClusterId
   aws_metric_name: ReplicationLag
+  aws_namespace: AWS/ElastiCache
+  aws_statistics:
+  - Average
+- aws_dimensions:
+  - CacheNodeId
+  - CacheClusterId
+  aws_metric_name: IsMaster
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
