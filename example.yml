@@ -664,5 +664,3 @@ metrics:
   aws_namespace: AWS/NATGateway
   aws_statistics:
   - Sum
-
-#
