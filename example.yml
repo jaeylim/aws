@@ -399,5 +399,3 @@ metrics:
   aws_namespace: AWS/Redshift
   aws_statistics:
   - Maximum
-
-#Backup
