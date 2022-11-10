@@ -536,3 +536,20 @@ metrics:
   aws_namespace: AWS/ElastiCache
   aws_statistics:
   - Average
+  
+#Firehose
+- aws_dimensions:
+  - DeliveryStreamName
+  aws_metric_name: ListDeliveryStreams.Latency
+  aws_namespace: AWS/Firehose
+  aws_statistics:
+  - Sum
+- aws_dimensions:
+  - DeliveryStreamName
+  aws_metric_name: ListDeliveryStreams.Requests
+  aws_namespace: AWS/Firehose
+  aws_statistics:
+  - Sum  
+  
+  
+  
